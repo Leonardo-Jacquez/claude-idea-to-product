@@ -46,8 +46,19 @@ This is the primary entry point. It runs the full pipeline with built-in builder
 - `architecture-builder`
 - `architecture-adversarial-checker`
 
-### Building & Evaluation
-- Builder + Checker loops (integrated in main command)
+### Building
+- `build-builder`
+- `build-adversarial-checker`
+
+### Evaluation & Handoff
+- `evaluation-functional`
+- `evaluation-adversarial`
+- `handoff-packager`
+
+### Supporting Assets
+- `templates/` — intake, architecture, evaluation rubric, manifest
+- `governance/` — prod-ready & security/governance checklists
+- `solutions/<slug>/` — per-run artifact store with traceability (`manifest.yaml`, `decisions.md`)
 
 ## How to Use
 

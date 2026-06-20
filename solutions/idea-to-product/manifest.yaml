@@ -1,0 +1,35 @@
+# Solution Manifest — traceability root for one solution run.
+# Maintained by the /build-solution orchestrator. Every phase appends here.
+
+solution:
+  slug: idea-to-product
+  title: "Idea-to-Product Guided Pipeline (self-build / dogfood reference)"
+  owner: "UNASSIGNED — nominate before handoff"   # prod-ready gate requires a named owner
+  created: 2026-06-20
+  status: handoff-conditional                       # intake | architecture | building | evaluation | handoff | done
+
+# Locked decisions from checkpoints (see decisions.md for rationale).
+decisions:
+  success_bar: "Consistently produce high-quality, business-aligned, traceable solutions; defensibility via builder+adversarial loops at every stage. Adoption is a byproduct, not the goal."
+  scope: "Full guided pipeline + ONE reference solution. Reference = the pipeline itself (dogfood)."
+  prod_ready_definition: "Documented + tested + deployable + security/governance reviewed + named owner."
+  platform: "Claude Code only."
+
+# Open assumptions — resolved at handoff.
+open_assumptions:
+  - "Target timeline — CALCULATED (see timeline-estimate.md): typical run ~5 business days; conditional->production ~1 business week. Review-latency-bound."
+  - "Long-term owner — UNASSIGNED by decision (D6); accepted exception, may remain unassigned."
+
+# Artifact chain — the traceability spine (problem -> handoff).
+artifacts:
+  intake:        { path: intake.md,        gate: passed,  must_fix_open: 0 }
+  architecture:  { path: architecture.md,  gate: passed,  must_fix_open: 0 }
+  build:         { path: .claude/ + templates/ + governance/, gate: passed, must_fix_open: 0 }
+  evaluation:    { path: evaluation.md,    gate: conditional, must_fix_open: 0, accepted_exceptions: 1 }
+  handoff:       { path: handoff.md,       gate: conditional }
+
+checkpoints:
+  - { id: 1, name: Intake,       status: approved, date: 2026-06-20 }
+  - { id: 2, name: Architecture, status: approved, date: 2026-06-20 }
+  - { id: 3, name: Building,     status: approved, date: 2026-06-20 }
+  - { id: 4, name: Evaluation,   status: approved, date: 2026-06-20 }

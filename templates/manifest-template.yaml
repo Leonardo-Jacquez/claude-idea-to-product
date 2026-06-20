@@ -1,0 +1,28 @@
+# Solution Manifest template — copy to solutions/<slug>/manifest.yaml
+solution:
+  slug: <slug>
+  title: "<title>"
+  owner: "UNASSIGNED — nominate before handoff"
+  created: <YYYY-MM-DD>
+  status: intake   # intake | architecture | building | evaluation | handoff | done
+
+decisions:
+  success_bar: "<measurable primary success bar>"
+  scope: "<in/out of scope>"
+  prod_ready_definition: "<definition>"
+  platform: "<platform constraints>"
+
+open_assumptions: []
+
+artifacts:
+  intake:        { path: intake.md,        gate: pending, must_fix_open: 0 }
+  architecture:  { path: architecture.md,  gate: pending, must_fix_open: 0 }
+  build:         { path: build/,           gate: pending }
+  evaluation:    { path: evaluation.md,    gate: pending }
+  handoff:       { path: handoff.md,       gate: pending }
+
+checkpoints:
+  - { id: 1, name: Intake,       status: pending }
+  - { id: 2, name: Architecture, status: pending }
+  - { id: 3, name: Building,     status: pending }
+  - { id: 4, name: Evaluation,   status: pending }
