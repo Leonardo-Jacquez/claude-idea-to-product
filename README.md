@@ -1,12 +1,12 @@
 # Claude Idea-to-Product
 
-An internal AI system that turns business problems into valuable, evaluated solutions.
+An AI system that turns business problems into valuable, evaluated solutions.
 
-This repository contains a structured, checkpoint-driven orchestrator for Claude Code that guides the full journey from vague business idea to production-ready output.
+This repository contains a structured, checkpoint-driven orchestrator for Claude Code that guides the full journey from vague business idea to production-ready output. It is domain-agnostic — point it at any business problem.
 
 ## Vision
 
-Help teams across the company reliably convert business problems into high-value AI solutions with clear outcomes, while maintaining human oversight at key decision points.
+Reliably convert business problems into high-value AI solutions with clear outcomes, while maintaining human oversight at key decision points.
 
 ## Core Philosophy
 
@@ -66,9 +66,8 @@ This is the primary entry point. It runs the full pipeline with built-in builder
 2. Run `/build-solution` and describe the business problem
 3. Review outputs at each natural checkpoint and provide direction
 
-## Internal Company Use
+## What It Emphasizes
 
-This system is designed for internal use. It emphasizes:
 - Clear business value definition
 - Risk management through adversarial review
 - Human decision points at key stages
@@ -77,8 +76,12 @@ This system is designed for internal use. It emphasizes:
 ## Future Enhancements
 
 - Packaging & deployment guidance
-- Integration with internal tools and data sources
+- Integration with external tools and data sources
 - Template library for common business problem types
+
+## License
+
+MIT — see [LICENSE](LICENSE). Copyright (c) 2026 Leonardo Jacquez.
 
 ---
 
